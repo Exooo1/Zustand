@@ -1,6 +1,110 @@
+@keyframes anim {
+  from{
+    position: relative;
+    top: -20px;
+  }
+  to{
+    position: relative;
+    top: 0;
+  }
+}
+@keyframes animtwo {
+  from{
+    position: relative;
+    top: 20px;
+  }
+  to{
+    position: relative;
+    top: 0;
+  }
+}
 .main {
-  border-radius: 20px;
+  height: 600px;
   width: 700px;
-  height: 500px;
-  background: darkgrey;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+
+  &_card {
+    &_content{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      section{
+        line-height: 10px;
+        p{
+          color: darkgrey;
+          font-weight: 500;
+        }
+      }
+    }
+    &_numbers{
+      display: flex;
+      gap: 25px;
+      div{
+        display: flex;
+      }
+      .main_card_numbers_anim{
+        color: greenyellow;
+        animation: anim 200ms;
+      }
+      .main_card_numbers_animReverse{
+        animation: animtwo 200ms;
+      }
+    }
+    &_images {
+      img {
+        width: 50px;
+      }
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    color: white;
+    font-weight: 600;
+    font-family: "Calibri Light";
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 220px;
+    background: #606373;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+  }
+
+  &_fields {
+    border-radius: 20px;
+    height: 500px;
+    width: 550px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &_content {
+      height: 350px;
+      width: 500px;
+      background: greenyellow;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+
+      input {
+        font-size: 20px;
+        box-shadow: 0 0 5px black;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+      }
+    }
+  }
 }
